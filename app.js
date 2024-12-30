@@ -1,30 +1,30 @@
-// const username=prompt("enter you first name");
-// const gender=prompt("enter your gender");
-// if (gender === "male"){
-//     alert("welcome mr : " +username);
-// }
-// else if (gender==="female"){
-//     alert("welcome ms:" + username);
+const username=prompt("enter you first name");
+const gender=prompt("enter your gender");
+if (gender === "male"){
+    alert("welcome mr : " +username);
+}
+else if (gender==="female"){
+    alert("welcome ms:" + username);
 
-// }
-// else {
-//     alert("welcome" + username);
-// }
+}
+else {
+    alert("welcome" + username);
+}
 
-// const yourorder = prompt("enter your order shawarma or zinger or burger");
+const yourorder = prompt("enter your order shawarma or zinger or burger");
 
-// if (yourorder==="shawarma"){
-//     alert("thank you for oredering shawarma");
-// }
-// else if (yourorder==="zinger"){
-//     alert("thank you for oredering zinger");
-// }
-// else if (yourorder==="burger"){
-//     alert("thank you for oredering burger");
-// }
-// else {
-//     alert("please order");
-// }
+if (yourorder==="shawarma"){
+    alert("thank you for oredering shawarma");
+}
+else if (yourorder==="zinger"){
+    alert("thank you for oredering zinger");
+}
+else if (yourorder==="burger"){
+    alert("thank you for oredering burger");
+}
+else {
+    alert("please order");
+}
 
 const number = prompt("enter a number")
 if (number == "1") {
