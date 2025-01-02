@@ -1,44 +1,45 @@
-const username=prompt("enter you first name");
-const gender=prompt("enter your gender");
-if (gender === "male"){
-    alert("welcome mr : " +username);
-}
-else if (gender==="female"){
-    alert("welcome ms:" + username);
+const form = document.getElementById("userForm");
 
-}
-else {
-    alert("welcome" + username);
-}
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent the default form submission
 
-const yourorder = prompt("enter your order shawarma or zinger or burger");
+    const username = document.getElementById("username").value;
+    const age = document.getElementById("age").value;
+    const gender = document.getElementById("gender").value;
+    const order = document.querySelector('input[name="order"]:checked')?.value;
 
-if (yourorder==="shawarma"){
-    alert("thank you for oredering shawarma");
-}
-else if (yourorder==="zinger"){
-    alert("thank you for oredering zinger");
-}
-else if (yourorder==="burger"){
-    alert("thank you for oredering burger");
-}
-else {
-    alert("please order");
+    if (`!username!age  gender === "Select" || !order`) {
+    alert("Please fill out all fields correctly.");
+    return;
 }
 
-const number = prompt("enter a number")
-if (number == "1") {
-    alert("one");
-}
-else if (number == "2") {
-    alert("two");
-}
-else if (number == "3") {
-    alert("three");
-}
-else if (number === "4") {
-    alert("four");
-}
-else{
-    alert ("enter number from 1 to 4");
-}
+// Display user info on the page
+const parentElement = document.getElementById("parentDiv");
+parentElement.textContent = (`Name: ${ username }, Age: ${ age }, Gender: ${ gender }`);
+
+// Display order list
+const orderedList = document.createElement("ol");
+[
+    "Name: " + username,
+    "Age: " + age,
+    "Gender: " + gender,
+    "Order: " + order,
+].forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    orderedList.appendChild(listItem);
+});
+
+const listContainer = document.getElementById("list-container");
+listContainer.innerHTML = ""; // Clear previous content
+listContainer.appendChild(orderedList);
+
+console.log(`Name: ${ username }`);
+console.log(`Age: ${ age }`);
+console.log(`Gender: ${ gender }`);
+console.log(`Order: ${ order }`);
+});
+
+
+
+////////////////////////////////////////////////////////
